@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>B3 Finance - Mercado Financeiro Brasileiro</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Header Component -->
+   <header class="header" id="header">
+      <nav class="navbar">
+         <div class="nav-container">
+            <div class="nav-logo">
+               <i class="fas fa-chart-line"></i>
+               <span>B3 Finance</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+               <li><a href="#home" class="nav-link active">Home</a></li>
+               <li><a href="#cotacoes" class="nav-link">Cotações</a></li>
+               <li><a href="#ibovespa" class="nav-link">Ibovespa</a></li>
+               <li><a href="#dolar" class="nav-link">Dólar</a></li>
+               <li><a href="#selic" class="nav-link">Selic</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Hero Section -->
+   <section id="home" class="hero">
+      <div class="hero-content">
+         <h1>Rogerio Neves B3 Finance</h1>
+         <p>Acompanhe em tempo real as cotações da B3, Ibovespa, Dólar e Selic</p>
+         <div class="hero-stats">
+            <div class="stat-item">
+               <span class="stat-value" id="ibov-value">136.892</span>
+               <span class="stat-label">Ibovespa</span>
+               <span class="stat-change positive">+1,23%</span>
+            </div>
+            <div class="stat-item">
+               <span class="stat-value" id="dolar-value">5,67</span>
+               <span class="stat-label">USD/BRL</span>
+               <span class="stat-change negative">-0,45%</span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Main Content -->
+   <main class="main-content">
+      <!-- Cotações Section -->
+      <section id="cotacoes" class="section">
+         <h2>Cotações em Destaque</h2>
+         <div class="cards-grid" id="cotacoes-grid">
+            <!-- Cards serão populados via JS -->
+         </div>
+      </section>
+
+      <!-- Ibovespa Section -->
+      <section id="ibovespa" class="section">
+         <h2>Índice Ibovespa</h2>
+         <div class="chart-container">
+            <canvas id="ibovChart"></canvas>
+         </div>
+         <div class="index-details">
+            <div class="index-card">
+               <h3>IBOV</h3>
+               <div class="index-value">136.892 <span class="positive">+1,23%</span></div>
+               <div class="index-time">Atualizado: 15:30</div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Dólar Section -->
+      <section id="dolar" class="section">
+         <h2>Dólar Comercial</h2>
+         <div class="currency-container">
+            <div class="currency-card">
+               <div class="currency-value">R$ 5,6723</div>
+               <div class="currency-change negative">-0,45%</div>
+               <div class="currency-details">
+                  <span>Máx: 5,6850</span>
+                  <span>Mín: 5,6610</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Selic Section -->
+      <section id="selic" class="section">
+         <h2>Taxa Selic</h2>
+         <div class="selic-container">
+            <div class="selic-card">
+               <div class="selic-current">11,75% a.a.</div>
+               <div class="selic-info">
+                  <span>Meta atual (COPOM)</span>
+                  <span>Próxima reunião: 06/11</span>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="footer-content">
+         <p>&copy; 2026 B3 Finance. Criado por Rogerio Neves.</p>
+         <div class="footer-links">
+            <a href="#">Termos</a>
+            <a href="#">Privacidade</a>
+            <a href="#">Contato</a>
+         </div>
+      </div>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="main.js"></script>
+   <script src="sw.js"></script>
+   <script src="script.js"></script>
+   <script src="api.js"></script>
+</body>
+
+</html>
